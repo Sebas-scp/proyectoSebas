@@ -4,9 +4,9 @@ package Semana3;
 public class Metodos 
 {
    
-   
+   static int iva = 100;
    //este metodo suma dos numeros tipo entero
-   public static int pedro(int numero1, int numero2)
+   public static int sumar(int numero1, int numero2)
    {
       int resultado;
       resultado = numero1 + numero2;
@@ -14,10 +14,10 @@ public class Metodos
     }
    
     //este metodo suma dos numeros de tipo float
-    public static float pedro(float numero1, float numero2)
+    public static long sumar(long numero1, long numero2)
    {
-      float resultado;
-      resultado = numero1 + numero2;
+      long resultado;
+      resultado = numero1 + numero2 + iva;
       return resultado;
     }
     
@@ -31,7 +31,8 @@ public class Metodos
     public static int multiplicar(int numero1, int numero2)
    {
       int resultado;
-      resultado = numero1 * numero2;
+      int mult = numero1*numero2;
+      resultado = sumar(mult,iva);
       return resultado;
     }
    
@@ -46,13 +47,15 @@ public class Metodos
    public static void main (String[] args) 
    {
        //creamos un espacio donde se almacena lo que me da pedro
-       int resultadoParaJefe;
+       int salarioBase = 1214123;
+       int bonoVentas = 2341411;
+       
+       float resultadoParaJefe;
+       
        //digito el nombre del metodo (valores de lo que queremos sumar)
-      resultadoParaJefe =  pedro(3,4);
+      resultadoParaJefe =  sumar(salarioBase,bonoVentas);
       System.out.print(resultadoParaJefe);
        
    }
 }     
-
-           
 
