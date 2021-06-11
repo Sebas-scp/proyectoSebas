@@ -15,20 +15,19 @@ public class impuestoRenta
 {
  public static double calcularImpuesto(int numDependientes, double salario)
     {
-        double monto;
-        if (salario < 200000)
+        double monto=0;
+        if (salario <= 200000)
             monto = salario;
-        else if ( salario < 400000 )
+        else if ( salario <= 400000 )
             monto = 0.10;
-        else if ( salario < 600000 )
+        else if ( salario <= 600000 )
             monto = 0.15; 
-        else if ( salario < 800000 )
+        else if ( salario <= 800000 )
             monto = 0.20;    
         else if ( salario > 800000 )
             monto = 0.30;
         
-        
-        double monto2;
+        double monto2 = 0;
         if (numDependientes == 1)
             monto2 = salario*1;
         else if ( numDependientes == 2 )
@@ -56,25 +55,7 @@ public class impuestoRenta
     int numDependientes = entrada.nextInt();
     
     double pagar = calcularImpuesto(numDependientes,salario);
-    System.out.printf("El monto a pagar es:  %f",pagar);
-    
+    System.out.printf("El monto a pagar es:  %f%n",pagar);
     
   }
- 
-
-
-
-  
-
-
-
-
-
-
-
-
-
-
-
-    
 }
