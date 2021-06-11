@@ -17,7 +17,7 @@ public class impuestoRenta
     {
         double monto=0;
         if (salario <= 200000)
-            monto = salario;
+            monto = 0;
         else if ( salario <= 400000 )
             monto = 0.10;
         else if ( salario <= 600000 )
