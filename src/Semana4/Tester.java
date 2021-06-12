@@ -22,7 +22,10 @@ public class Tester
         factorRiesgo=entrada.nextInt();  
         String salida ="";
         
+        
+        //Clase variable = new Clase
         Citas s = new Citas();
+        //invoco el metodo llamado cita con el parametro (factorRiesgo)
         String r= s.cita(factorRiesgo);
         System.out.print(r);
  
