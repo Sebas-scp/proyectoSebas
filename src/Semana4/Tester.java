@@ -15,19 +15,11 @@ public class Tester
 {
     public static void main (String[] args)
     {
-        Scanner entrada = new Scanner(System.in);
-        
-        System.out.println("Introduzca numero de factor de riesgo: ");
-        int factorRiesgo=0;
-        factorRiesgo=entrada.nextInt();  
-        String salida ="";
-        
-        
+     
         //Clase variable = new Clase
         Citas s = new Citas();
         //invoco el metodo llamado cita con el parametro (factorRiesgo)
-        String r= s.cita(factorRiesgo);
+        String r= s.cita();
         System.out.print(r);
- 
     }
 }
