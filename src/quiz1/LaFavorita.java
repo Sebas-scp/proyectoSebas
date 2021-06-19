@@ -38,19 +38,19 @@ public class LaFavorita
             System.out.print("No se agregaron ingredientes");
         
         
-        if (tamano==4)
+        if (tamano==4){
             costo = costo + (0.10*costo); 
-            return costo;
-        else if (tamano==5)
+            return costo;}
+        else if (tamano==5){
             costo = costo + (0.40*costo);
-            return costo;
+            return costo;}
         else
             System.out.println("No introdujo tamano de pizza.");
                 
         System.out.println("RECIBO:");
         System.out.printf("Ingredientes: %d%n%d%n%d%n",ingrediente1,ingrediente2,ingrediente3);
-        System.out.printf("El monto a pagar es: %d ",costo);
-        
+        System.out.printf("El monto a pagar es: %f ",costo);
+        return costo;
         
     }
     
