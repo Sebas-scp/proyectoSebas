@@ -1,4 +1,3 @@
-
 package quiz1;
 
 import java.util.Scanner;
@@ -28,25 +27,27 @@ public class LaFavorita
         System.out.println("tamano: escriba 4 para tamano mediano o escriba 5 para tamano grande: ");
         tamano= entrada.nextByte();
         
+        
         if (ingrediente1==1)
             costo += 500;
+            
         if (ingrediente2==2)
             costo += 600;
+        
         if (ingrediente3==3)
             costo += 700;
-        else
-            System.out.print("No se agregaron ingredientes");
-        
-        
-        if (tamano==4){
-            costo = costo + (0.10*costo); 
-            return costo;}
-        else if (tamano==5){
-            costo = costo + (0.40*costo);
-            return costo;}
-        else
-            System.out.println("No introdujo tamano de pizza.");
+   
+        switch(tamano)
+        {
+            case 4:
+                costo = costo + (0.10*costo); 
                 
+            case 5:
+                costo = costo + (0.40*costo); 
+                
+                       
+        }
+       
         System.out.println("RECIBO:");
         System.out.printf("Ingredientes: %d%n%d%n%d%n",ingrediente1,ingrediente2,ingrediente3);
         System.out.printf("El monto a pagar es: %f ",costo);
@@ -61,4 +62,3 @@ public class LaFavorita
         System.out.print(salida);
     }
 }
-
