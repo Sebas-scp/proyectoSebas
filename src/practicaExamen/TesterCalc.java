@@ -1,5 +1,7 @@
 
-package Semana3;
+package practicaExamen;
+
+import practicaExamen.Calculadora;
 
 public class TesterCalc 
 {

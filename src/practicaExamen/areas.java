@@ -1,5 +1,5 @@
 
-package semana5;
+package practicaExamen;
 
 import java.util.Scanner;
 
@@ -11,7 +11,7 @@ public class areas
         Scanner entrada= new Scanner(System.in);
         System.out.println("Introduzca el lado del cuadrado: ");
         int lado= entrada.nextInt();
-        int area = lado*4;
+        int area = lado*2;
         return area;
     }
     public static int rectangulo()
