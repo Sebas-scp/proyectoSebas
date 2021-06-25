@@ -1,4 +1,4 @@
-
+//problema 6 areas
 package practicaExamen;
 
 import java.util.Scanner;

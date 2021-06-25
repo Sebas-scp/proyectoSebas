@@ -1,16 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+//problema 2
 package practicaExamen;
 
 import java.util.Scanner;
 
-/**
- *
- * @author usuario
- */
 public class Calculadora 
 {
     //1 metodo para sumar:    
@@ -35,7 +27,7 @@ public class Calculadora
     
     
     
-    //3 metodo para promedio:
+    //2.1 metodo para promedio:
     public static double prom()
     {
         Scanner entrada = new Scanner(System.in);
@@ -59,6 +51,7 @@ public class Calculadora
             return 0;
     }
     
+    //2.2 metodo para factorial
     public static int factorial()
     {
         int num1=1;
@@ -77,7 +70,7 @@ public class Calculadora
         return contador;
     }
     
-    
+    //2.3 metodo para maximo
     public static int maxNum()
     {
         Scanner entrada2 = new Scanner(System.in);
@@ -112,6 +105,7 @@ public class Calculadora
             
     }
     
+    //2.4 metodo para invertir el orden de numeros
     public static String inversorNum()
     {
         Scanner entrada2 = new Scanner(System.in);
@@ -135,6 +129,7 @@ public class Calculadora
         return orden;
     }
     
+    //problema 7 calcular exponentes
     public static float exponentes()
     {
         Scanner entrada2= new Scanner(System.in);
