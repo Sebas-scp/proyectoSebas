@@ -135,7 +135,7 @@ public class Compugramas
         {
             for(int j=0; j<n; j++)
             {
-               if (i==0 || i==(n-1) || j==0 || j==(n-1) || i==j || i==(n-j-1) )
+               if (i==0 || i==(n-1) || j==0 || j==(n-1) || i==j || i==(n-j-1))
                {  
                    System.out.print("*");
                }
@@ -145,6 +145,36 @@ public class Compugramas
                } 
             }
             System.out.println();
+        }
+    }
+    
+     public static void compugrama7()
+    {
+        int n=12;
+        for(int i=0; i<n; i++)
+        {
+            System.out.print("*");
+        }
+        System.out.println("");
+        
+        for(int i=0; i<n; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+               if (i==0 || i==(n-1) || j==0 || j==(n-1) || i==j || i==(n-j-1))
+               {  
+                   System.out.print("*");
+               }
+               else
+               {
+                   System.out.print(" ");
+               } 
+            }
+            System.out.println();
+        }
+        for(int i=0; i<n; i++)
+        {
+            System.out.print("*");
         }
     }
    
@@ -176,6 +206,10 @@ public class Compugramas
        
        System.out.println("Compugrama 6: ");
        compugrama6();
+       System.out.println("");
+       
+       System.out.println("Compugrama 7: ");
+       compugrama7();
        System.out.println("");
     }
 }
