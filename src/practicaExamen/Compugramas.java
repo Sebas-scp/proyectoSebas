@@ -11,9 +11,8 @@ package practicaExamen;
  */
 public class Compugramas 
 {
-    public static String compugrama0()
+    public static void compugrama0()
     {
-       String orden="";
        int n=25;
        for(int i=0; i<n; i++)
        {
@@ -34,13 +33,11 @@ public class Compugramas
        {
            System.out.print("*");
        }
-       return orden;
     }
     
-    public static String compugrama1()
+    public static void compugrama1()
     {
-        String orden="";
-        byte n=5;
+        byte n=12;
         for (byte u=2; u <= n  ;u++)
         {
             System.out.print("-");
@@ -50,13 +47,11 @@ public class Compugramas
             }
         }
         
-        return orden;
     }
     
-    public static String compugrama2()
+    public static void compugrama2()
     {
-        String orden="";
-        byte n=5;
+        byte n=12;
         for (byte u=0; u < n-2  ;u++)
         {
             for (byte i=0; i < n  ;i++)
@@ -70,14 +65,12 @@ public class Compugramas
             }
             System.out.println();     
         }
-        return orden;
     }
     
     
-    public static String compugrama3()
+    public static void compugrama3()
     {
-        String orden="";
-        int n=5;
+        int n=12;
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<n; j++)
@@ -93,24 +86,18 @@ public class Compugramas
             }
             System.out.println();
         }
-        return orden;
     }
     
-    public static String compugrama4()
+    public static void compugrama4()
     {
-        String orden="";
-        int n=5;
+        int n=12;
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<n; j++)
             {
-               if (i==0 || i==(n-1) || j==0 || j==(n-1) )
+               if (i==0 || i==(n-1) || j==0 || j==(n-1) || j==i )
                {  
                    System.out.print("*");
-               }
-               else if (j==1 && i==1 || j== n-2 && i== n-2|| j== n-3 && i==n-3 )
-               {
-                   System.out.print("*"); 
                }
                else
                {
@@ -119,24 +106,18 @@ public class Compugramas
             }
             System.out.println();
         }
-        return orden;
     }
     
-    public static String compugrama5()
+    public static void compugrama5()
     {
-        String orden="";
-        int n=5;
+        int n=12;
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<n; j++)
             {
-               if (i==0 || i==(n-1) || j==0 || j==(n-1) )
+               if (i==0 || i==(n-1) || j==0 || j==(n-1) || i==(n-j-1) )
                {  
                    System.out.print("*");
-               }
-               else if (j==1 && i==3 || j==2 && i==2 || j==3 && i==1 )
-               {
-                   System.out.print("*"); 
                }
                else
                {
@@ -145,33 +126,56 @@ public class Compugramas
             }
             System.out.println();
         }
-        return orden;
+    }
+    
+    public static void compugrama6()
+    {
+        int n=12;
+        for(int i=0; i<n; i++)
+        {
+            for(int j=0; j<n; j++)
+            {
+               if (i==0 || i==(n-1) || j==0 || j==(n-1) || i==j || i==(n-j-1) )
+               {  
+                   System.out.print("*");
+               }
+               else
+               {
+                   System.out.print(" ");
+               } 
+            }
+            System.out.println();
+        }
     }
    
     public static void main(String[] args)
     {
        System.out.println("Compugrama 0: ");
-       String activarCompugrama0=compugrama0();
+       compugrama0();
        System.out.println("");
        
        System.out.println("Compugrama 1: ");
-       String activarCompugrama1=compugrama1();
+       compugrama1();
        System.out.println("");
        
        System.out.println("Compugrama 2: ");
-       String activarCompugrama2=compugrama2();
+       compugrama2();
        System.out.println("");
        
        System.out.println("Compugrama 3: ");
-       String activarCompugrama3=compugrama3();
+       compugrama3();
        System.out.println("");
        
        System.out.println("Compugrama 4: ");
-       String activarCompugrama4=compugrama4();
+       compugrama4();
        System.out.println("");
        
        System.out.println("Compugrama 5: ");
-       String activarCompugrama5=compugrama5();
+       compugrama5();
+       System.out.println("");
+       
+       System.out.println("Compugrama 6: ");
+       compugrama6();
        System.out.println("");
     }
 }
