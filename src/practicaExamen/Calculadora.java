@@ -54,18 +54,21 @@ public class Calculadora
     //2.2 metodo para factorial
     public static int factorial()
     {
-        int num1=1;
+        int num=1;
         int contador=1;
         
         //se pide al usuario el numero que desee calcular el factorial
         Scanner entrada = new Scanner(System.in);
         System.out.println("Introduzca el numero a calcular el factorial (!): ");
-        num1= entrada.nextInt();
+        num= entrada.nextInt();
         
-        while (num1>0)
+        if (num==0)
+            return 0;
+        
+        while (num>0)
         {  
-           contador *= num1;
-           num1--;
+           contador *= num;
+           num--;
         }
         return contador;
     }
@@ -157,14 +160,14 @@ public class Calculadora
     {
         Scanner entrada = new Scanner(System.in);
         Scanner entrada2 = new Scanner(System.in);
-        double numero3 = 0;
         int opcion = 0;
         
         
-        System.out.print("Opciones escriba: 1 para suma,2 para multiplicar, 3 para promedio, 4 para factorial"
-                + ", 5 para maximo, 6 para inversor, 7 para exponentes o -2 para terminar: ");
-        while (entrada.hasNext())
+        
+        while (true)
         {
+            System.out.print("Opciones escriba: 1 para suma,2 para multiplicar, 3 para promedio, 4 para factorial"
+            + ", 5 para maximo, 6 para inversor, 7 para exponentes o -2 para terminar: ");
             opcion = entrada.nextInt();
             switch (opcion)
             {
@@ -172,9 +175,7 @@ public class Calculadora
                     //digito el nombre del metodo (valores de lo que queremos sumar)
                     int resultadoSuma =  suma();
                     System.out.printf("El resultado es: %d%n",resultadoSuma);
-                    opcion=0;
-                    System.out.print("Opciones escriba: 1 para suma,2 para multiplicar, 3 para promedio, 4 para factorial"
-                            + ", 5 para maximo, 6 para inversor, 7 para exponentes o -2 para terminar: ");
+                    
                     break;
                     
                     
@@ -190,9 +191,7 @@ public class Calculadora
                     //digito el nombre del metodo (valores de lo que queremos sumar)
                     resultadoMulti =  multi(numero1,numero2);
                     System.out.printf("El resultado es: %d%n",resultadoMulti); 
-                    opcion=0;
-                    System.out.print("Opciones escriba: 1 para suma,2 para multiplicar, 3 para promedio, 4 para factorial"
-                            + ", 5 para maximo, 6 para inversor, 7 para exponentes o -2 para terminar: ");
+                   
                     break;
                     
               
@@ -202,38 +201,32 @@ public class Calculadora
                     //digito el nombre del metodo (valores de lo que queremos sumar)
                     resultadoProm = prom();
                     System.out.printf("El promedio es: %f%n",resultadoProm); 
-                    opcion=0;
-                    System.out.print("Opciones escriba: 1 para suma,2 para multiplicar, 3 para promedio, 4 para factorial"
-                            + ", 5 para maximo, 6 para inversor, 7 para exponentes o -2 para terminar: ");
+                    
                     break;
                     
                 case 4:
                     int resultadoFactorial = factorial();
                     System.out.printf("El factorial del numero introducido es: %d%n",resultadoFactorial);
-                    System.out.print("Opciones escriba: 1 para suma,2 para multiplicar, 3 para promedio, 4 para factorial"
-                            + ", 5 para maximo, 6 para inversor, 7 para exponentes o -2 para terminar: ");
+                    
                     break;
                     
                 case 5:
                     int resultadoMax = maxNum();
                     System.out.printf("El maximo entre los numeros es: %d%n",resultadoMax);
-                    System.out.print("Opciones escriba: 1 para suma,2 para multiplicar, 3 para promedio, 4 para factorial"
-                            + ", 5 para maximo, 6 para inversor, 7 para exponentes o -2 para terminar: ");
+                    
                     break;
                     
                 case 6:
                     String resultadoInversor; 
                     resultadoInversor= inversorNum();
                     System.out.println(resultadoInversor);
-                    System.out.print("Opciones escriba: 1 para suma,2 para multiplicar, 3 para promedio, 4 para factorial"
-                            + ", 5 para maximo, 6 para inversor, 7 para exponentes o -2 para terminar: ");
+                    
                     break;
                     
                 case 7:
                     float resultadoExpo = exponentes();
                     System.out.printf("El resultado es:  %f%n",resultadoExpo);
-                    System.out.print("Opciones escriba: 1 para suma,2 para multiplicar, 3 para promedio, 4 para factorial"
-                            + ", 5 para maximo, 6 para inversor, 7 para exponentes o -2 para terminar: ");
+                    
                     break;
                 
                     
@@ -242,6 +235,5 @@ public class Calculadora
                     break;
             }  
         }
-    return opcion;
     }   
 }

@@ -50,43 +50,41 @@ public class areas
     {
         Scanner entrada= new Scanner(System.in);
         byte opcion=0;
-        System.out.println("Introduzca 1 para area cuadrado, 2 para area rectangulo, 3 area triangulo, 4 area circulo o -1 para terminar: ");
-        while (entrada.hasNext())
+        
+        while (true)
         {
+            System.out.println("Introduzca 1 para area cuadrado, 2 para area rectangulo, 3 area triangulo, 4 area circulo o -1 para terminar: ");
             opcion= entrada.nextByte();
             switch (opcion)
             {
                 case 1:
                     int resultadoArea=cuadrado();
                     System.out.printf("El area del cuadrado es: %d%n",resultadoArea);
-                    opcion=0;
-                    System.out.println("Introduzca 1 para area cuadrado, 2 para area rectangulo, 3 area triangulo, 4 area circulo o -1 para terminar: ");
+                    
+                    
                     break;
                     
                 case 2:
                     resultadoArea=rectangulo();
                     System.out.printf("El area del rectangulo es: %d%n",resultadoArea);
-                    opcion=0;
-                    System.out.println("Introduzca 1 para area cuadrado, 2 para area rectangulo, 3 area triangulo, 4 area circulo o -1 para terminar: ");
+                    
                     break;
                     
                 case 3:
                     resultadoArea=triangulo();
                     System.out.printf("El area del triangulo es: %d%n",resultadoArea);
-                    opcion=0;
-                    System.out.println("Introduzca 1 para area cuadrado, 2 para area rectangulo, 3 area triangulo, 4 area circulo o -1 para terminar: ");
+                    
                     break;
                     
                 case 4:
                     float resultadoAreaCirca=circulo();
                     System.out.printf("El area del circulo es: %f%n",resultadoAreaCirca);
-                    opcion=0;
-                    System.out.println("Introduzca 1 para area cuadrado, 2 para area rectangulo, 3 area triangulo, 4 area circulo o -1 para terminar: ");
+                    
                     break;
                     
                 case -1:
                     System.out.println("Terminado.");
-                    break;     
+                    break;   
             }
         }
     }
