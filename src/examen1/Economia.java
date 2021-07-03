@@ -64,6 +64,7 @@ public class Economia
                     creditos=entrada.nextBoolean();
                     break;
                 
+                //print de la informacion de empresa
                 case 2:
                     System.out.printf("Nombre de la empresa: %s%n"
                         +"\n Provincia: %s"
@@ -74,7 +75,8 @@ public class Economia
                         ,nombreEmpresa,provincia,cantidadTrabajadores,cantidadCovid,ingresoPromedio,creditos
                         );
                     break;
-                    
+                
+                //calculo del monto e interes    
                 case 3:
                     int poblacion=0;
                     switch(provincia)
@@ -101,30 +103,77 @@ public class Economia
                             poblacion=limon;
                             break;
                     }
-                    int monto=(cantidadCovid/cantidadTrabajadores)*poblacion;
+                    double monto=(cantidadCovid/cantidadTrabajadores)*poblacion;
+                    System.out.printf("El monto es: %d",monto);
                     
+                    
+                    double ajusteValor=ajuste();
                     
                     double interes=0;
                     if (creditos==true)
+                    {
                         if(cantidadTrabajadores<10)
-                            interes=0.5+ajuste;
+                            interes=0.5+ajusteValor;
                         else if (cantidadTrabajadores<30)
-                            interes=0.4+ajuste;
+                            interes=0.4+ajusteValor;
                         else if (cantidadTrabajadores>=30)
-                            interes=0.3+ajuste;
+                            interes=0.3+ajusteValor;
+                    System.out.printf("El interes es: %d",interes);
+                    }
+                    else
+                    {
+                       if(cantidadTrabajadores<10)
+                            interes=0.5;
+                        else if (cantidadTrabajadores<30)
+                            interes=0.4;
+                        else if (cantidadTrabajadores>=30)
+                            interes=0.3; 
+                    System.out.printf("El interes es: %d",interes);
+                    }
                     
-                    
-                                    
-            }
+                //borrar datos    
+                case 4:
+                    nombreEmpresa="";
+                    provincia="";
+                    cantidadTrabajadores=0;
+                    cantidadCovid=0;
+                    ingresoPromedio=0;
+                    creditos=false;
+                    break;
+            }                      
         }
-    } 
+    }
     
+    //metodo para calcular el ajuste
     public static double ajuste()
     {
-        
-        int contador=0;
+        Scanner entrada=new Scanner(System.in);
+
+
+        int creditos=0;
+        int cantidad=0;
         int total=0;
-        while ()
-                
-    }
-}
+        while (creditos!=-1)
+        {
+            cantidad+=creditos;
+            total++;
+            System.out.println("Introduzca los creditos uno por uno o escriba -1 para terminar: ");
+            creditos=entrada.nextInt();
+
+        }
+
+        double promedio=0;
+        if (cantidad != 0)
+        {
+            promedio=((double)creditos/total);
+        }
+        else
+            System.out.println("No se introdujeron numeros.");
+
+        double ajuste=promedio/100000;
+        return ajuste;
+    }  
+}  
+    
+    
+
