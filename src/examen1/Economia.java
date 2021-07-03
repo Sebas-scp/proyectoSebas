@@ -71,9 +71,11 @@ public class Economia
                         +"\n Cantidad trabajadores: %d"
                         +"\n Trabajadores con COVID19: %d"
                         +"\n Ingreso promedio mensual: %d"
-                        +"\n Creditos: %b"
+                        +"\n Creditos: %b%n%n"
                         ,nombreEmpresa,provincia,cantidadTrabajadores,cantidadCovid,ingresoPromedio,creditos
                         );
+                    if(cantidadCovid>20)
+                        System.out.println("ALERTA DE PERSONAL CON COVID \n");
                     break;
                 
                 //calculo del monto e interes    
@@ -103,8 +105,8 @@ public class Economia
                             poblacion=limon;
                             break;
                     }
-                    double monto=(cantidadCovid/cantidadTrabajadores)*poblacion;
-                    System.out.printf("El monto es: %d",monto);
+                    double monto=((double)cantidadCovid/cantidadTrabajadores)*poblacion;
+                    System.out.println("El monto es: "+monto);
                     
                     
                     double ajusteValor=ajuste();
@@ -118,7 +120,7 @@ public class Economia
                             interes=0.4+ajusteValor;
                         else if (cantidadTrabajadores>=30)
                             interes=0.3+ajusteValor;
-                    System.out.printf("El interes es: %d",interes);
+                    System.out.println("El interes es: "+interes);
                     }
                     else
                     {
@@ -128,7 +130,7 @@ public class Economia
                             interes=0.4;
                         else if (cantidadTrabajadores>=30)
                             interes=0.3; 
-                    System.out.printf("El interes es: %d",interes);
+                    System.out.println("El interes es: "+interes);
                     }
                     
                 //borrar datos    
