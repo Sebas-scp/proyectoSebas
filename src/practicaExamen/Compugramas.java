@@ -130,7 +130,7 @@ public class Compugramas
     
     public static void compugrama6()
     {
-        int n=12;
+        int n=1000;
         for(int i=0; i<n; i++)
         {
             for(int j=0; j<n; j++)
