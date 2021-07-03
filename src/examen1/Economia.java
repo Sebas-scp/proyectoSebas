@@ -48,7 +48,7 @@ public class Economia
                     System.out.println("Nombre de la empresa: ");
                     nombreEmpresa=entrada.next();
                     
-                    System.out.println("Provincia donde se ubica: ");
+                    System.out.println("Provincia donde se ubica (escribir en minuscula y todo junto): ");
                     provincia=entrada.next();
                     
                     System.out.println("Cantidad de trabajadores: ");
@@ -105,12 +105,15 @@ public class Economia
                             poblacion=limon;
                             break;
                     }
+                    
                     double monto=((double)cantidadCovid/cantidadTrabajadores)*poblacion;
-                    System.out.println("El monto es: "+monto);
+                    if (monto>=1000000)
+                        System.out.println("El monto es: 1000000");
+                    else
+                        System.out.println("El monto es: "+monto);
                     
                     
                     double ajusteValor=ajuste();
-                    
                     double interes=0;
                     if (creditos==true)
                     {
@@ -160,18 +163,17 @@ public class Economia
             cantidad+=creditos;
             total++;
             System.out.println("Introduzca los creditos uno por uno o escriba -1 para terminar: ");
-            creditos=entrada.nextInt();
-
+            creditos=entrada.nextInt();  
         }
 
         double promedio=0;
         if (cantidad != 0)
         {
-            promedio=((double)creditos/total);
+            promedio=(((double)cantidad)/total);
         }
         else
             System.out.println("No se introdujeron numeros.");
-
+        
         double ajuste=promedio/100000;
         return ajuste;
     }  
