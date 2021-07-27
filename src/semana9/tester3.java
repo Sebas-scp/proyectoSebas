@@ -22,4 +22,5 @@ public class tester3
        
     }
     
+    //Integer.parseInt lo que hace es que transforma un texto a un numero.
 }

@@ -5,6 +5,8 @@
  */
 package semana8;
 
+import java.util.Scanner;
+
 /**
  *
  * @author usuario
@@ -52,27 +54,87 @@ public class Arreglos
             System.out.println(numeros[j]);
         }
         
-        //le asigno el tamano de 100 al arreglo
+        System.out.println("numeritos[j] = j es usado para asignar los valores de j"
+                + ", si no esta, devuelve 0, 20 veces");
+        //le asigno el tamano de 20 al arreglo
         int [] numeritos;
-        numeritos = new int [100];
+        numeritos = new int [20];
         for (int j=0; j<numeritos.length;j++)
         {
-            System.out.println(numeritos[j]);
+            numeritos[j] = j;
+            System.out.println(j+"."+numeritos[j]);
         }
         
+        System.out.println();
         
+        System.out.println("Imprimir contador asignando valor de i");
         int[] num;
         int contador=0;
-        num=new int[100];
+        num=new int[50];
         int n = num.length;
-        for (int i=0; i<=n-1 ;i++)
+        for (int i=0; i<num.length-1 ;i++)
         {
-            num[i] = i;
+            //se asigna el valor creciente de +1 a cada posicion num
+            //como hago para quitar los impares?
+            if(num[i]==0)
+                num[i] = i;
+            else
+                num[(2*i-1)]=0;
         }
         n = num.length;
+        
+        
         for(int i=0; i<=n-1 ; i++)
         {
-            System.out.println(num[i]);
+            System.out.println(i+"."+num[i]);
         }
-    }
+        
+        System.out.println();
+        System.out.println();
+        
+        //Libro: pag 248
+        
+        int [] arreglo= new int [10];
+        System.out.printf("%s%8s%16s%n","indice","valor","valor + 14");
+        
+        for(int i=0; i<arreglo.length; i++)
+        {
+            arreglo[i]=i;
+            System.out.printf("%5d%8d%n",i,arreglo[i]);    
+        }
+        
+        for(int i=0; i<arreglo.length; i++)
+        {
+            arreglo[i]=i+14;
+            System.out.printf("%5d%9d%n",i+10,arreglo[i]);    
+        }
+        
+        //que significa cuando tengo "arreglo2= "?
+        
+        
+        System.out.println();
+        System.out.println("Sumar elementos de arreglo");
+        Scanner entrada= new Scanner(System.in);
+        
+        System.out.println("Cuantos numeros sumar?  ");
+        int tamano = entrada.nextInt();
+        int [] arreglo2=new int[tamano];
+        int total=0;
+        
+        for(int i=0; i<arreglo2.length; i++)
+        {
+            System.out.println("introduzca los "+arreglo2.length+" numeros: ");
+            int nume= entrada.nextInt();
+            arreglo2[i]=nume;
+            total += nume;
+        }
+        
+        System.out.printf("%s%8s%n","Posicion","Numero");
+        for(int i=0; i<arreglo2.length; i++)
+        {
+            arreglo2[i]=i;
+            System.out.printf("%5d%8d%n",i,arreglo2[i]);
+        }
+        System.out.printf("Suma total: %d%n",total);
+    }    
 }
