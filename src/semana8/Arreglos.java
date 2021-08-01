@@ -76,13 +76,13 @@ public class Arreglos
         {
             //se asigna el valor creciente de +1 a cada posicion num
             //como hago para quitar los impares?
-            if(num[i]==0)
+            if(i%2 !=0)
                 num[i] = i;
             else
-                num[(2*i-1)]=0;
+                num[i]=0;
         }
         n = num.length;
-        
+         
         
         for(int i=0; i<=n-1 ; i++)
         {
@@ -132,7 +132,6 @@ public class Arreglos
         System.out.printf("%s%8s%n","Posicion","Numero");
         for(int i=0; i<arreglo2.length; i++)
         {
-            arreglo2[i]=i;
             System.out.printf("%5d%8d%n",i,arreglo2[i]);
         }
         System.out.printf("Suma total: %d%n",total);
