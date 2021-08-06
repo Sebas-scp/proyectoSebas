@@ -2,7 +2,8 @@
 package proyecto;
 
 import java.util.Scanner;
-
+import javax.swing.*;
+import java.awt.*;
 
 public class TesterTODO 
 {
@@ -22,14 +23,24 @@ public class TesterTODO
                 MonedaCambio salida = new MonedaCambio();
                 float valor=salida.menu();
                 System.out.println(valor);
+                break;
                 
             case 3:
-                //OvaloRectangulo resulta= new OvaloRectangulo();
+                JPanelDibujo dibujar = new JPanelDibujo();
+                byte terminar=0;
+                terminar=entrada.nextByte();
+                while(terminar!=-1)
+                {
+                    System.out.println("Terminar?");
+                    terminar=entrada.nextByte();
+                    MiVentana ventana = new MiVentana("Ventana grafica");
+                }
                 
                 
             case 5:
                 Union salid= new Union();
                 salid.intercalar();
+                break;
         }
         
     }

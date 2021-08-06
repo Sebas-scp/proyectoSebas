@@ -22,7 +22,8 @@ public class JPanelDibujo extends JPanel{
   public void paint (Graphics g) { 
         super.paint(g);
         
-        Ovalo ov = new Ovalo(150,50,100,100);
+        Ovalo ov = new Ovalo(640,25,200,59);
+        Rectangulo ra = new Rectangulo(78,150,248,25);
         
         //LINEAS
         g.drawLine(25,90,60,50); //dibuja una línea
@@ -35,6 +36,7 @@ public class JPanelDibujo extends JPanel{
         g.fillOval(200,160,160,80); //dibuja un ovalo con fondo amarillo
         
         //RECTANGULOS
+        g.drawOval(ra.getPosX(), ra.getPosY(),ra.getAncho(), ra.getAlto());
         g.setColor(Color.blue);
         g.fillRect(450,80,180,90);
         g.setColor(Color.black);
