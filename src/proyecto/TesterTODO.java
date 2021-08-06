@@ -1,12 +1,36 @@
 
 package proyecto;
 
+import java.util.Scanner;
+
 
 public class TesterTODO 
 {
     public static void main(String[] args) 
     {
-        Moneda salida = new Moneda();
-        salida.menu();
+        Scanner entrada= new Scanner(System.in);
+        System.out.println("Moneda(1), Moneda cambio(2), OvaloRectangulo(3), Union(5)");
+        byte opcion=entrada.nextByte();
+        switch(opcion)
+        {
+            case 1:
+                Moneda resultado= new Moneda();
+                resultado.menu();
+                break;
+                
+            case 2:
+                MonedaCambio salida = new MonedaCambio();
+                float valor=salida.menu();
+                System.out.println(valor);
+                
+            case 3:
+                //OvaloRectangulo resulta= new OvaloRectangulo();
+                
+                
+            case 5:
+                Union salid= new Union();
+                salid.intercalar();
+        }
+        
     }
 }
