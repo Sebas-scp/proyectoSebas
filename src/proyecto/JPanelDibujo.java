@@ -22,8 +22,22 @@ public class JPanelDibujo extends JPanel{
   public void paint (Graphics g) { 
         super.paint(g);
         
-        Ovalo ov = new Ovalo(640,25,200,59);
-        Rectangulo ra = new Rectangulo(78,150,248,25);
+        int min=1;
+        int max=400;
+        int randAlto=(int)Math.floor(Math.random()*(max-min+1)+min);
+        int randAncho=(int)Math.floor(Math.random()*(max-min+1)+min);
+        int randX=(int)Math.floor(Math.random()*(max-min+1)+min);
+        int randY=(int)Math.floor(Math.random()*(max-min+1)+min);
+        Ovalo ov = new Ovalo(randX,randY,randAncho,randAlto);
+        
+        
+        
+        
+        int randAltoC=(int)Math.floor(Math.random()*(max-min+1)+min);
+        int randAnchoC=(int)Math.floor(Math.random()*(max-min+1)+min);
+        int randXC=(int)Math.floor(Math.random()*(max-min+1)+min);
+        int randYC=(int)Math.floor(Math.random()*(max-min+1)+min);
+        Rectangulo ra = new Rectangulo(randAltoC,randAnchoC,randXC,randYC);
         
         //LINEAS
         g.drawLine(25,90,60,50); //dibuja una línea
@@ -36,11 +50,11 @@ public class JPanelDibujo extends JPanel{
         g.fillOval(200,160,160,80); //dibuja un ovalo con fondo amarillo
         
         //RECTANGULOS
-        g.drawOval(ra.getPosX(), ra.getPosY(),ra.getAncho(), ra.getAlto());
+        g.drawRect(ra.getPosX(), ra.getPosY(),ra.getAncho(), ra.getAlto());
         g.setColor(Color.blue);
-        g.fillRect(450,80,180,90);
+        g.fillRect(randAltoC,randAnchoC,randXC,randYC);
         g.setColor(Color.black);
-        g.drawRect(475,100,50,50);
+        g.drawRect(randAltoC,randAnchoC,randXC,randYC);
         g.clearRect(555,100,50,50);//note lo que pasa si comenta esta línea
         
         // STRINGS

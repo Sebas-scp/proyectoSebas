@@ -2,8 +2,6 @@
 package proyecto;
 
 import java.util.Scanner;
-import javax.swing.*;
-import java.awt.*;
 
 public class TesterTODO 
 {
@@ -26,15 +24,13 @@ public class TesterTODO
                 break;
                 
             case 3:
-                JPanelDibujo dibujar = new JPanelDibujo();
-                byte terminar=0;
-                terminar=entrada.nextByte();
-                while(terminar!=-1)
+                byte seguir = 0;
+                do
                 {
-                    System.out.println("Terminar?");
-                    terminar=entrada.nextByte();
-                    MiVentana ventana = new MiVentana("Ventana grafica");
-                }
+                    System.out.println("Seguir?");
+                    seguir= entrada.nextByte();
+                    MiVentana vent= new MiVentana("Dibujos");
+                }while(seguir!=-1);
                 
                 
             case 5:
@@ -42,6 +38,5 @@ public class TesterTODO
                 salid.intercalar();
                 break;
         }
-        
     }
 }
