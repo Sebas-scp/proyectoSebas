@@ -31,6 +31,7 @@ public class TesterTODO
                     seguir= entrada.nextByte();
                     MiVentana vent= new MiVentana("Dibujos");
                 }while(seguir!=-1);
+                break;
                 
                 
             case 5:
