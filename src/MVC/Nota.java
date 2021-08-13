@@ -26,7 +26,7 @@ public class Nota
             }
         } catch(ArrayIndexOutOfBoundsException ae)
         {
-            System.out.println("Error, demasiados datos ingresados");
+            System.out.println("Error, demasiados datos ingresados.");
             posicion--;       
         }  
     }
