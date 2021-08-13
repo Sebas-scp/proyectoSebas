@@ -31,7 +31,11 @@ public class Vista
            JTextArea at = new JTextArea();
            
            //accesa al arreglo con getNotas en la posicion i
-           at.append(nota.getNotas(i)+ "/n");    
+           for(i=0;i<nota.getPosicion();i++)
+           {
+                at.append(nota.getNotas(i)+ "\n");
+           }
+           JOptionPane.showMessageDialog(null, at);       
        }
    }
    
