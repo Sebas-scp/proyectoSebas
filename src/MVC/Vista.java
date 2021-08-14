@@ -25,18 +25,14 @@ public class Vista
    
    public void mostrarDatos()
    {
+       //introduce el area de texto para mostrar las notas registradas
+       JTextArea at = new JTextArea();
        for(byte i=0;i<nota.getPosicion();i++)
        {
-           //introduce el area de texto para mostrar las notas registradas
-           JTextArea at = new JTextArea();
-           
            //accesa al arreglo con getNotas en la posicion i
-           for(i=0;i<nota.getPosicion();i++)
-           {
-                at.append(nota.getNotas(i)+ "\n");
-           }
-           JOptionPane.showMessageDialog(null, at);       
+            at.append(nota.getNotas(i)+ "\n");      
        }
+       JOptionPane.showMessageDialog(null, at);
    }
    
    public int menuOP()

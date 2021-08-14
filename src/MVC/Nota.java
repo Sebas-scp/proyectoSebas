@@ -20,10 +20,7 @@ public class Nota
     {
         try
         {
-            for (byte i=0;i<arregloNotas.length;i++)
-            {
-                arregloNotas[i]= notaEstudiante;
-            }
+             arregloNotas[posicion++]= notaEstudiante;   
         } catch(ArrayIndexOutOfBoundsException ae)
         {
             System.out.println("Error, demasiados datos ingresados.");
