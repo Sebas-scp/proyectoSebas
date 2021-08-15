@@ -11,13 +11,14 @@ package quiz2;
  */
 public class Parlante 
 {
-    private double[] arregloNotas;
+    private double[] arregloAudios;
     private byte volumen=0;
     private int indice;
     private boolean habilitarParlante=true;
     char tipo; //I izq, D derecho y S subwoofer
 
-    public Parlante(int indice, char tipo) {
+    public Parlante(boolean habilitarParlante,int indice, char tipo) 
+    {
         this.indice = indice;
         this.tipo = tipo;
     }
