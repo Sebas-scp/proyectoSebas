@@ -14,7 +14,6 @@ public class Alumno
     Examen examen;
     String nombre;
     String apellidos;
-    char grado;
     int carnet;
 
     public String getNombre() {
@@ -31,14 +30,6 @@ public class Alumno
 
     public void setApellidos(String apellidos) {
         this.apellidos = apellidos;
-    }
-
-    public char getGrado() {
-        return grado;
-    }
-
-    public void setGrado(char grado) {
-        this.grado = grado;
     }
 
     public int getCarnet() {

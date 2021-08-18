@@ -53,9 +53,4 @@ public class Examen
     public void setPuntosObtenidos(int PuntosObtenidos) {
         this.PuntosObtenidos = PuntosObtenidos;
     }
-    
-    
-    
-    
-    
 }
