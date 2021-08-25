@@ -18,7 +18,8 @@ public class EquipoSONIDO2
     Parlante2 sub;
     Reloj2 reloj;
     Radio2 radio;
-
+        
+    
     public EquipoSONIDO2(int cantidadAudios)
     {
         arregloSonido=new String[cantidadAudios];
@@ -26,6 +27,7 @@ public class EquipoSONIDO2
         parDer = new Parlante2(6,true,'D');
         parIzq = new Parlante2(6,true,'I');
         sub = new Parlante2(6,true,'S');
+        System.out.println("hola");
     }
     
     
