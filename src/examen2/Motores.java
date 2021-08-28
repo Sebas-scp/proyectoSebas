@@ -15,6 +15,14 @@ public class Motores
     String modeloMot;
     int serie;
 
+    public Motores(int peso, String modeloMot, int serie) 
+    {
+        this.peso = peso;
+        this.modeloMot = modeloMot;
+        this.serie = serie;
+    }
+
+    
     public int getPeso() {
         return peso;
     }

@@ -14,6 +14,17 @@ public class Automovil
     short anio;
     Motores motor;
 
+    public Automovil(String modelo, String estilo, String color, byte puertas, short anio, Motores motor) {
+        this.modelo = modelo;
+        this.estilo = estilo;
+        this.color = color;
+        this.puertas = puertas;
+        this.anio = anio;
+        this.motor = motor;
+    }
+    
+    
+
     public String getModelo() {
         return modelo;
     }
