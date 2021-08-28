@@ -22,8 +22,6 @@ public class Automovil
         this.anio = anio;
         this.motor = motor;
     }
-    
-    
 
     public String getModelo() {
         return modelo;

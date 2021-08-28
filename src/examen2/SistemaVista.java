@@ -6,6 +6,7 @@
 package examen2;
 
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 
 /**
  *
@@ -17,31 +18,44 @@ public class SistemaVista
     Automovil auto;
     Inventario inventario;
     
-    public mostrarListaBodega()
+    public void mostrarListaBodega()
     {
-        
+        JTextArea at= new JTextArea();
+        for(int i=0; i<inventario.getPosicion();i++)
+        {
+            at.append(inventario.getVehiculo(i)+"\n");
+        }
+        JOptionPane.showMessageDialog(null, at);
     }
     
-    public mostrarListaVendidos()
+    public void mostrarListaVendidos()
     {
-        
+        JTextArea at= new JTextArea();
+        for(int i=0; i<inventario.getPosicion();i++)
+        {
+            at.append(inventario.getVehiculo(i)+"\n");
+        }
+        JOptionPane.showMessageDialog(null, at);
     }
     
-    public mostrarListaDevueltos()
+    public void mostrarListaDevueltos()
     {
-        
+        JTextArea at= new JTextArea();
+        for(int i=0; i<inventario.getPosicion();i++)
+        {
+            at.append(inventario.getVehiculo(i)+"\n");
+        }
+        JOptionPane.showMessageDialog(null, at);
     }
     
-    public agregarVehiculoFabricado()
+    public void agregarVehiculoFabricado()
     {
-        String modelo=JOptionPane.showInputDialog("Introduzca el modelo del vehiculo: ");
-        String estilo=JOptionPane.showInputDialog("Introduzca el estilo del vehiculo: ");
-        String color=JOptionPane.showInputDialog("Introduzca el color del vehiculo: ");
-        byte puertas=Byte.parseByte(JOptionPane.showInputDialog("Introduzca las puertas del vehiculo: "));
-        short anio=Short.parseShort(JOptionPane.showInputDialog("Introduzca el anio del vehiculo: "));
-        
-        Automovil nuevoAuto=new Automovil(modelo,estilo,color,puertas,anio,motor);
-        
+        byte estado= Byte.parseByte(JOptionPane.showInputDialog("Introduzca el estado 1 para bodega, 2 para vendido o 3 para devuelto. "));
+        int serie=Integer.parseInt(JOptionPane.showInputDialog("Introduzca la serie del nuevo vehiculo. "));
+        int peso=Integer.parseInt(JOptionPane.showInputDialog("Introduzca el peso del nuevo motor. "));
+        String modMot=JOptionPane.showInputDialog("Introduzca el modelo del nuevo motor. ");
+        int serieMot=Integer.parseInt(JOptionPane.showInputDialog("Introduzca la serie del nuevo motor. "));
+        inventario.registrarVehiculo(serie, estado,peso,"modMot",serieMot);  
     }
     
     

@@ -23,13 +23,13 @@ public class SistemaControl
             switch(opcion)
             {
                 case 1:
-                    
+                    vista.mostrarListaBodega();
                 case 2:
-                    
+                    vista.mostrarListaDevueltos();
                 case 3:
-                    
+                    vista.mostrarListaVendidos();
                 case 4:
-                    
+                    vista.agregarVehiculoFabricado();
             }
         }while(opcion != 5); 
     }

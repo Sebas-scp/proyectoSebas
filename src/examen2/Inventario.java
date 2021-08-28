@@ -1,6 +1,8 @@
 
 package examen2;
 
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author Sebastian Cordero Mora
@@ -11,7 +13,6 @@ public class Inventario
     int posicion;
     byte estado; //1. bodega 2. vendidos 3. devueltos
     SistemaVista vista;
-    Motores motor;
     Automovil auto;
     
     public Inventario(int cantidadAutos)
@@ -20,13 +21,32 @@ public class Inventario
         posicion = 0;
     }
     
-    public void registrarVehiculo(int serieVehiculo, byte estado)
+    public void registrarVehiculo(int serieVehiculo, byte estado, int peso, String modeloMot, int serie)
     {
-        vehiculoAlmacenado[posicion++]=serieVehiculo;
-        //info motor:
-        int peso=motor.getPeso();
-        String mod=motor.getModeloMot();
-        int serie=motor.getSerie();
+        switch(estado)
+        {
+            case 1: //almacen
+            {
+                vehiculoAlmacenado[posicion++]=serieVehiculo;
+                Motores motor= new Motores(peso,"modeloMot",serie);
+                
+                break;
+            }
+
+            case 2: //vendido
+            {
+                vehiculoAlmacenado[posicion++]=serieVehiculo;
+                Motores motor= new Motores(peso,"modeloMot",serie);
+                break;
+            }
+
+            case 3: //devuelto
+            {
+                vehiculoAlmacenado[posicion++]=serieVehiculo;
+                Motores motor= new Motores(peso,"modeloMot",serie);
+                break;
+            }
+        }
     }
     
     private void establecerComoVendido(Automovil auto){
